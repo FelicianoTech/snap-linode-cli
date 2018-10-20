@@ -1,0 +1,26 @@
+name: linode-cli
+version: "v2.0.9"
+summary: "linode-cli allows you to manage your Linode account from your terminal."
+description: |
+  linode-cli allows you to manage your Linode account from your terminal. Create, manage, and delete Linode VPSs, domain names, and more.
+grade: stable
+confinement: strict
+icon: icon.png
+
+base: core18
+
+parts:
+  linode-cli:
+    plugin: python
+    source: https://github.com/linode/linode-cli
+    source-type: git
+    source-tag: "2.0.9"
+    python-packages:
+      - linode-cli
+
+apps:
+  linode-cli:
+    command: linode-cli
+    plugs:
+      - home
+      - network
