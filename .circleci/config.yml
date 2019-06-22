@@ -16,7 +16,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cibuilds/snapcraft:stable
+      - image: cibuilds/snapcraft:1e81ae9ae18e59559b4f9d8e1cdf526c87655447
     steps:
       - checkout
       - run:
@@ -29,7 +29,7 @@ jobs:
 
   publish-snap:
     docker:
-      - image: cibuilds/snapcraft:stable
+      - image: cibuilds/snapcraft:1e81ae9ae18e59559b4f9d8e1cdf526c87655447
     steps:
       - attach_workspace:
           at: .
