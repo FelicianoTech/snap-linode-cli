@@ -1,5 +1,6 @@
+version: 2.1
+
 workflows:
-  version: 2
   main:
     jobs:
       - build
@@ -11,17 +12,15 @@ workflows:
               only: master
           context: main
 
-
-version: 2
 jobs:
   build:
     docker:
-      - image: cibuilds/snapcraft:1e81ae9ae18e59559b4f9d8e1cdf526c87655447
+      - image: cibuilds/snapcraft:core18
     steps:
       - checkout
       - run:
           name: "Build Snap"
-          command: sudo apt update && snapcraft
+          command: snapcraft
       - persist_to_workspace:
           root: .
           paths:
@@ -29,7 +28,7 @@ jobs:
 
   publish-snap:
     docker:
-      - image: cibuilds/snapcraft:1e81ae9ae18e59559b4f9d8e1cdf526c87655447
+      - image: cibuilds/snapcraft:core18
     steps:
       - attach_workspace:
           at: .
@@ -45,4 +44,4 @@ jobs:
           command: |
             mkdir .snapcraft
             echo $SNAPCRAFT_LOGIN_FILE | base64 --decode --ignore-garbage > .snapcraft/snapcraft.cfg
-            snapcraft push *.snap --release stable
+            snapcraft push --release=stable *.snap
