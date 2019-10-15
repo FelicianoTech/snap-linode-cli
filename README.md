@@ -1,4 +1,4 @@
-# Linode CLI Snap Package [![CircleCI Build Status](https://circleci.com/gh/felicianotech/linode-cli-snap.svg?style=shield)](https://circleci.com/gh/felicianotech/linode-cli-snap) [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/felicianotech/linode-cli-snap/master/LICENSE)
+# Linode CLI Snap Package [![CircleCI Build Status](https://circleci.com/gh/felicianotech/snap-linode-cli.svg?style=shield)](https://circleci.com/gh/felicianotech/snap-linode-cli) [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/felicianotech/snap-linode-cli/master/LICENSE)
 
 `linode-cli` allows you to manage your Linode account from your terminal.
 Create, manage, and delete Linode VPSs, domain names, and more.
