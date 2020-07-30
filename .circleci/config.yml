@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run:
           name: "Build Snap"
-          command: snapcraft
+          command: sudo apt-get update && snapcraft
       - persist_to_workspace:
           root: .
           paths:

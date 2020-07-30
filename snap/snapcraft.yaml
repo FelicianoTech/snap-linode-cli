@@ -1,5 +1,5 @@
 name: linode-cli
-version: "2.15.0"
+version: "2.16.0"
 summary: "linode-cli allows you to manage your Linode account from your terminal."
 description: |
   linode-cli allows you to manage your Linode account from your terminal. Create, manage, and delete Linode VPSs, domain names, and more.
