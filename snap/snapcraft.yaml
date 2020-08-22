@@ -7,13 +7,15 @@ grade: stable
 confinement: strict
 icon: icon.png
 
-base: core18
+base: core20
 
 parts:
   linode-cli:
     plugin: python
     python-packages:
       - linode-cli==$SNAPCRAFT_PROJECT_VERSION
+    stage-packages:
+      - python3
 
 apps:
   linode-cli:
