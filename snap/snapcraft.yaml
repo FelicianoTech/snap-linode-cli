@@ -12,11 +12,8 @@ base: core18
 parts:
   linode-cli:
     plugin: python
-    source: https://github.com/linode/linode-cli
-    source-type: git
-    source-tag: $SNAPCRAFT_PROJECT_VERSION
     python-packages:
-      - linode-cli
+      - linode-cli==$SNAPCRAFT_PROJECT_VERSION
 
 apps:
   linode-cli:
