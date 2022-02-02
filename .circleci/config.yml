@@ -15,7 +15,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: cibuilds/snapcraft:core18
+      - image: cibuilds/snapcraft:core20
     steps:
       - checkout
       - run:
