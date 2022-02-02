@@ -15,12 +15,14 @@ workflows:
 jobs:
   build:
     docker:
-      - image: cibuilds/snapcraft:core18
+      - image: cibuilds/snapcraft:core20
     steps:
       - checkout
       - run:
           name: "Build Snap"
-          command: sudo apt-get update && snapcraft
+          command: |
+            sudo apt-get update && sudo apt-get install -y python3
+            snapcraft
       - persist_to_workspace:
           root: .
           paths:
