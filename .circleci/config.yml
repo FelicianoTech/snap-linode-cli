@@ -14,8 +14,8 @@ workflows:
 
 jobs:
   build:
-    docker:
-      - image: cibuilds/snapcraft:core18
+    machine:
+      image: ubuntu-2004:202111-02
     steps:
       - checkout
       - run:
